@@ -5,7 +5,7 @@
 
 "use strict";
 
-  // This function Calculates the total price. 
+  // This function Calculates the total price of the order. 
   function calculate() { 
     
   // Get Pancake Size 
@@ -27,9 +27,22 @@
     pancakePrice = 5;
   }
 
-  // Get Toppings 
-  let pancakeToppings = parseInt(document.getElementById('pancake-toppings').value);
+  // Declare Toppings Price
+  let pancakeTopping = parseInt(document.getElementById('pancake-topping').value);
+    
+  let pancakeToppingPrice = "" ;
+  
+  if (pancakeTopping="one-topping") {
+    pancakeToppingPrice = 1;
+  }
 
+  else if (pancakeTopping = "two-topping") {
+    pancakeToppingPrice = 2;
+  }
+
+  else if (pancakeTopping) = "three-topping") {
+    pancakeToppingPrice = 3;
+  }
   
   // output if its warm or cold
   document.getElementById('program-feedback').innerHTML = programFeedback;
