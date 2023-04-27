@@ -9,7 +9,7 @@
   function calculate() { 
     
   // Get Pancake Size 
-  let sizePancakes = parseInt(document.getElementById('size-pancakes').value);
+  let sizePancakes = document.getElementById ('size-pancakes').value;
 
   // Declare Pancake Size
   
@@ -28,7 +28,7 @@
   }
 
   // Declare Toppings Price
-  let pancakeTopping = parseInt(document.getElementById('pancake-topping').value);
+  let pancakeTopping =  document.getElementById('pancake-topping').value;
     
   let pancakeToppingPrice = "" ;
   
@@ -43,7 +43,34 @@
   else if (pancakeTopping) = "three-topping") {
     pancakeToppingPrice = 3;
   }
+
+  // Declare Juice Price
+  let juiceSize = document.getElementById('juice-size').value;
+
+  let juicePrice = ""
+
+  if (juiceSize = "large") {
+    juicePrice = 4.50
+  }
+
+  else if (juiceSize = "medium") {
+    juicePrice = 3
+  }
+
+  else if (juiceSize = "small") {
+    juicePrice = 1.50
+  }
+
   
-  // output if its warm or cold
-  document.getElementById('program-feedback').innerHTML = programFeedback;
+  //calculate subtotal
+  let subtotal = pancakePrice + pancakeToppingPrice + juicePrice
+    
+  //calculate tax
+  let tax = subtotal*0.13
+
+  // Calculate final total price
+  let total = tax+subtotal
+  // output the price of the pancakes
+  
+  document.getElementById('program-feedback').innerHTML = "Your total price is:" + total.toFixed(2) + "dollars";
   }
