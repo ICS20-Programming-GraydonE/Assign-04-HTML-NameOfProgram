@@ -15,15 +15,15 @@
   
   let pancakePrice = "" ;
   
-  if (sizePancakes="three-pancakes") {
+  if (sizePancakes == "three-pancakes") {
     pancakePrice = 10;
   }
 
-  else if (sizePancakes = "two-pancakes") {
+  else if (sizePancakes == "two-pancakes") {
     pancakePrice = 7;
   }
 
-  else if (sizePancakes) = "kids-pancakes") {
+  else if (sizePancakes == "kids-pancakes") {
     pancakePrice = 5;
   }
 
@@ -31,33 +31,37 @@
   let pancakeTopping =  document.getElementById('pancake-topping').value;
     
   let pancakeToppingPrice = "" ;
+
+  if (pancakeTopping == "no-topping")  {
+    pancakeToppingPrice = 0;
+  }
   
-  if (pancakeTopping="one-topping") {
+  if (pancakeTopping == "one-topping") { 
     pancakeToppingPrice = 1;
   }
 
-  else if (pancakeTopping = "two-topping") {
+  else if (pancakeTopping == "two-topping") {
     pancakeToppingPrice = 2;
   }
 
-  else if (pancakeTopping) = "three-topping") {
+  else if (pancakeTopping == "three-topping") {
     pancakeToppingPrice = 3;
   }
 
   // Declare Juice Price
   let juiceSize = document.getElementById('juice-size').value;
 
-  let juicePrice = ""
+  let juicePrice = "" ;
 
-  if (juiceSize = "large") {
+  if (juiceSize == "large") {
     juicePrice = 4.50
   }
 
-  else if (juiceSize = "medium") {
+  else if (juiceSize == "medium") {
     juicePrice = 3
   }
 
-  else if (juiceSize = "small") {
+  else if (juiceSize == "small") {
     juicePrice = 1.50
   }
 
@@ -72,5 +76,6 @@
   let total = tax+subtotal
   // output the price of the pancakes
   
-  document.getElementById('program-feedback').innerHTML = "Your total price is:" + total.toFixed(2) + "dollars";
+  document.getElementById('final-price').innerHTML = "Your total price is:" + total.toFixed(2) + 
+" dollars";
   }
