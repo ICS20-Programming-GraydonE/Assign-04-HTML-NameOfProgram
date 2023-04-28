@@ -1,6 +1,6 @@
 
 // Created by: Graydon Ezzeddin
-// Created on: March 2022
+// Created on: April 2022
 // This file contains the JS functions for index.html
 
 "use strict";
@@ -13,7 +13,7 @@
 
   // Declare Pancake Size
   
-  let pancakePrice = "" ;
+  let pancakePrice = 0 ;
   
   if (sizePancakes == "three-pancakes") {
     pancakePrice = 10;
@@ -30,7 +30,7 @@
   // Declare Toppings Price
   let pancakeTopping =  document.getElementById('pancake-topping').value;
     
-  let pancakeToppingPrice = "" ;
+  let pancakeToppingPrice = 0 ;
 
   if (pancakeTopping == "no-topping")  {
     pancakeToppingPrice = 0;
@@ -51,7 +51,7 @@
   // Declare Juice Price
   let juiceSize = document.getElementById('juice-size').value;
 
-  let juicePrice = "" ;
+  let juicePrice = 0 ;
 
   if (juiceSize == "large") {
     juicePrice = 4.50
@@ -77,5 +77,5 @@
   // output the price of the pancakes
   
   document.getElementById('final-price').innerHTML = "Your total price is:" + total.toFixed(2) + 
-" dollars";
+"$";
   }
